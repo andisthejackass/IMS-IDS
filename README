@@ -1,0 +1,40 @@
+There is NO WARRANTY for this program. 
+Use at your own risk.
+
+A sniffer adjusted to work with Open-IMS (and any IMS) platform.
+
+Version 0.2 (2011-10-09)
+Author: Andis Anastasis (andisthejackassatgmaildotcom)
+
+
+
+!!!IMPORTANT!!!
+Make sure to backup your iptables rules before running iptables.sh
+
+
+
+Requirements
+--------------------
+1) A C compiler (gcc for example)
+2) iptables (which is embeded in linux systems, so you're probably OK)
+3) libpcap 
+
+
+
+Installation
+--------------------
+Just compile the program using
+	gcc ims.c -o ims -lpcap
+and you should have an "ims" executable in the same folder.
+
+
+
+Usage
+---------------------
+1)run "iptables.sh" script as root
+	sh iptables.sh
+2) run "ims" program as root and choose interface
+	./ims eth0
+
+As the IMS is running and people use the service, you shall see a lot of
+messages rushing through your terminal - that means in works ;)	
