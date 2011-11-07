@@ -444,8 +444,8 @@ got_packet(u_char *args, const struct pcap_pkthdr *header, const u_char *packet)
 	int size_payload;
 
 	
-	printf("\n####################\n");
-	printf("\nPacket number %d:\n", count);
+	//printf("\n####################\n"); --INFO MESSAGE REMOVED--
+	//printf("\nPacket number %d:\n", count); --INFO MESSAGE REMOVED--
 	count++;
 	
 	/* define ethernet header */
@@ -460,8 +460,8 @@ got_packet(u_char *args, const struct pcap_pkthdr *header, const u_char *packet)
 	}
 
 	/* print source and destination IP addresses */
-	printf("       From: %s\n", inet_ntoa(ip->ip_src));
-	printf("         To: %s\n", inet_ntoa(ip->ip_dst));
+	//printf("       From: %s\n", inet_ntoa(ip->ip_src)); --INFO MESSAGE REMOVED--
+	//printf("         To: %s\n", inet_ntoa(ip->ip_dst)); --INFO MESSAGE REMOVED--
 
 	const char *dassip = inet_ntoa(ip->ip_dst); //ATJ: metavliti gia tin FROM IP
 	
@@ -472,10 +472,10 @@ got_packet(u_char *args, const struct pcap_pkthdr *header, const u_char *packet)
    
    	eptr = (struct ether_header *) packet;
 
-   	fprintf(stdout,"   MAC From: %s\n",
-                  ether_ntoa((struct ether_addr*)eptr->ether_shost));
-  	fprintf(stdout,"   MAC   To: %s\n",
-                  ether_ntoa((struct ether_addr*)eptr->ether_dhost));
+   	//--INFO MESSAGE REMOVED--fprintf(stdout,"   MAC From: %s\n",
+        //--INFO MESSAGE REMOVED--          ether_ntoa((struct ether_addr*)eptr->ether_shost));
+  	//--INFO MESSAGE REMOVED--fprintf(stdout,"   MAC   To: %s\n",
+              //--INFO MESSAGE REMOVED--    ether_ntoa((struct ether_addr*)eptr->ether_dhost));
 
 	char *s = ether_ntoa((struct ether_addr*)eptr->ether_dhost);
     	char dassmac[30];     //ATJ: H MAC prepei na einai tis morfis 0a:0b:0f kai oxi a:b:f 
@@ -511,8 +511,8 @@ got_packet(u_char *args, const struct pcap_pkthdr *header, const u_char *packet)
 	
 	udp = (struct sniff_udp*)(packet + SIZE_ETHERNET + SIZE_UDP);
 	
-	printf("   Src port: %d\n", ntohs(udp->uh_sport));
-	printf("   Dst port: %d\n", ntohs(udp->uh_dport));
+	//--INFO MESSAGE REMOVED--printf("   Src port: %d\n", ntohs(udp->uh_sport));
+	//--INFO MESSAGE REMOVED--printf("   Dst port: %d\n", ntohs(udp->uh_dport));
 	
 	/* define/compute tcp payload (segment) offset */
 	payload = (u_char *)(packet + SIZE_ETHERNET + size_ip + SIZE_UDP);
@@ -545,7 +545,7 @@ got_packet(u_char *args, const struct pcap_pkthdr *header, const u_char *packet)
 	if (size_payload > 0) {
 		//printf("   Payload (%d bytes):\n", size_payload); //ATJ: comment sto payload size
 		//print_payload(payload, size_payload); //ATJ: comment sto "poluploko print"
-		printf("   Packet Data :\n%s \n", payload); //ATJ: aplo print, mono ta ascii
+		//--INFO MESSAGE REMOVED--printf("   Packet Data :\n%s \n", payload); //ATJ: aplo print, mono ta ascii
 		  	
 			char * pinakas[3][50];  //ATJ: pinakas pou tha krataei ta data poy theloume
 			char * tch;		//ATJ: pointer gia to parsing toy payload

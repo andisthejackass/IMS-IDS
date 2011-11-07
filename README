@@ -3,7 +3,7 @@ Use at your own risk.
 
 A sniffer adjusted to work with Open-IMS (and any IMS) platform.
 
-Version 0.2 (2011-10-09)
+Version 0.3 (2011-11-07)
 Author: Andis Anastasis (andisthejackassatgmaildotcom)
 
 
@@ -38,3 +38,5 @@ Usage
 
 As the IMS is running and people use the service, you shall see a lot of
 messages rushing through your terminal - that means in works ;)	
+
+I also included a "no_prints" version, that will not print any messages. The mechanism runs the same, though.
