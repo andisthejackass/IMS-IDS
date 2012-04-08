@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="IMS-IDS : An Intrusion Detection and Prevention System for IP Multimedia Subsystems. My BSc thesis, originally implemented to work with OpenIMS." />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>IMS-IDS</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/andisthejackass/IMS-IDS">Fork Me on GitHub</a>
+
+          <h1 id="project_title">IMS-IDS</h1>
+          <h2 id="project_tagline">An Intrusion Detection and Prevention System for IP Multimedia Subsystems. My BSc thesis, originally implemented to work with OpenIMS.</h2>
+
+          <section id="downloads">
+            <a class="zip_download_link" href="https://github.com/andisthejackass/IMS-IDS/zipball/master">Download this project as a .zip file</a>
+            <a class="tar_download_link" href="https://github.com/andisthejackass/IMS-IDS/tarball/master">Download this project as a tar.gz file</a>
+          </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p>There is NO WARRANTY for this program. 
+Use at your own risk.</p>
+
+<p>A sniffer adjusted to work with Open-IMS (and any IMS) platform.</p>
+
+<p>Version 0.3 (2011-11-07)
+Author: Andis Anastasis (andisthejackassatgmaildotcom)</p>
+
+<p>!!!IMPORTANT!!!
+Make sure to backup your iptables rules before running iptables.sh</p>
+
+<h2>Requirements</h2>
+
+<p>1) A C compiler (gcc for example)</p>
+
+<p>2) iptables (which is embeded in linux systems, so you're probably OK)</p>
+
+<p>3) libpcap </p>
+
+<h2>Installation</h2>
+
+<p>Just compile the program using</p>
+
+<pre><code>gcc ims.c -o ims -lpcap
+</code></pre>
+
+<p>and you should have an "ims" executable in the same folder.</p>
+
+<h2>Usage</h2>
+
+<p>1)run "iptables.sh" script as root</p>
+
+<pre><code>sh iptables.sh
+</code></pre>
+
+<p>2) run "ims" program as root and choose interface</p>
+
+<pre><code>./ims eth0
+</code></pre>
+
+<p>As the IMS is running and people use the service, you shall see a lot of
+messages rushing through your terminal - that means in works ;) </p>
+
+<p>I also included a "no_prints" version, that will not print any messages. The mechanism runs the same, though.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">IMS-IDS maintained by <a href="https://github.com/andisthejackass">andisthejackass</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-21115202-5");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+
+  </body>
+</html>
